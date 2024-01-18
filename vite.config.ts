@@ -13,11 +13,11 @@ export default defineConfig({
   },
   plugins: [
     Inspect(),
-    react({
-      babel: {
-        plugins: [[reactAnnotatePlugin]],
-      },
-    }),
+    // react({
+    //   babel: {
+    //     plugins: [[reactAnnotatePlugin]],
+    //   },
+    // }),
     // Put the Sentry vite plugin after all other plugins
     sentryVitePlugin({
       org: 'personal-organization-v3',
