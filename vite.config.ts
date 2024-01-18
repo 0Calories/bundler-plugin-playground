@@ -1,7 +1,9 @@
 import {defineConfig} from 'vite';
-import react from '@vitejs/plugin-react';
 import {sentryVitePlugin} from '@sentry/vite-plugin';
+import react from '@vitejs/plugin-react'
 import {NodeGlobalsPolyfillPlugin} from '@esbuild-plugins/node-globals-polyfill';
+import reactAnnotatePlugin from './react-annotate'
+import Inspect from 'vite-plugin-inspect'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,9 +12,10 @@ export default defineConfig({
     sourcemap: true, // Source map generation must be turned on
   },
   plugins: [
+    Inspect(),
     react({
       babel: {
-        plugins: [['@fullstory/babel-plugin-annotate-react']],
+        plugins: [[reactAnnotatePlugin]],
       },
     }),
     // Put the Sentry vite plugin after all other plugins

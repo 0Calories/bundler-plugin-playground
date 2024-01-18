@@ -2,7 +2,6 @@
   "name": "bundler-plugin-playground",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,16 +9,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-    "@fullstory/babel-plugin-annotate-react": "^2.3.0",
-    "@sentry/bundler-plugin-core": "^2.9.0",
-    "@sentry/react": "^7.76.0",
+    "@sentry-internal/tracing": "^7.86.0",
+    "@sentry/browser": "^7.86.0",
+    "@sentry/bundler-plugin-core": "^2.10.2",
+    "@sentry/core": "^7.86.0",
+    "@sentry/replay": "^7.86.0",
+    "@sentry/rollup-plugin": "^2.10.2",
+    "@sentry/tracing": "^7.86.0",
+    "@sentry/types": "^7.86.0",
+    "@sentry/utils": "^7.86.0",
+    "@sentry/vite-plugin": "^2.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@sentry/vite-plugin": "^2.8.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -29,6 +37,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-inspect": "^0.8.1"
   }
 }
